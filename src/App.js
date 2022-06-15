@@ -1,10 +1,18 @@
+import {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
-import Link from './components/Link'
+import LinkContainer from './components/LinkContainer';
 
-
+// const intialState = false
 
 function App() {
+  const [hideLink, setHideLink] = useState(false)
+  // console.log(useState(true));
+
+const hideLinkHandler = () => {
+  setHideLink(!hideLink) 
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,11 +20,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Link />
-        <Link />
-        <Link />
-        <Link />
-        <Link />
+        { !hideLink ? <LinkContainer /> : null }
+        <br />
+        <button onClick={hideLinkHandler}>{hideLink ? "Show Links" : "Hide Links"}</button>
       </header>
     </div>
   );
