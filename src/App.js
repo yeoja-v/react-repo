@@ -1,9 +1,14 @@
+import {useState} from 'react' 
 import logo from './logo.svg';
 import './App.css';
-import Link from "./components/Link"
-
+import LinkContainer from './components/LinkContainer';
 
 function App() {
+  const [hideLink, setHideLink] = useState(false)
+
+  const hideLinkHandler = () => {
+    setHideLink(!hideLink)
+  }
   
   return (
     <div className="App">
@@ -12,7 +17,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Link />
+        { !hideLink ? <LinkContainer /> : null }
+        <br />
+        <button onClick={hideLinkHandler}>{hideLink ? "Show Links" : "Hide Links"}</button>
       </header>
     </div>
   )

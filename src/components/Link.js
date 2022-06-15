@@ -1,12 +1,13 @@
-function Link() {
+function Link({href, children}) {
+
     return (
         <a
               className="App-link"
-              href="https://reactjs.org"
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Learn React - Modified - Finished My Feature
+              {children}
         </a>
     )
 }
