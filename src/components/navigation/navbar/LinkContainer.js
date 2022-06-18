@@ -32,16 +32,16 @@ const LinkContainer = () => {
 
 
     return (
-        <div>
+        <ul>
             {links.map(({id, href, content}) => {
                 return (
-                    <div key={id}>
+                    <li key={id}>
                         <Link href={href}>{content}</Link>
                         <br />
-                    </div>    
+                    </li>    
                 )
             })}
-        </div>
+        </ul>
     )
 }
 
