@@ -33,8 +33,12 @@ const Accordion = () => {
     // }
 
     const toggler = (id) => {
-        setFaqs((prevState) => prevState.map(faq => faq.id === id ? {...faq, isOpen: !faq.isOpen} : faq))
+        setFaqs(faqs.map(faq => faq.id === id ? {...faq, isOpen: !faq.isOpen} : faq))
     }
+
+    // 1. onClick={referenceFunction}
+    // 2. onClick={referenceFunction()}
+    // 3. onClick={() => handlerFunction()}
 
     return (
     <div className="border border-red-500">
