@@ -9,7 +9,7 @@ function Counter() {
 
     const incrementBy15 = () => {
         for (let i = 0; i < 15; i++) {
-            setCounter((prevCounter) => prevCounter + 1)
+            setCounter(prevCounter => prevCounter + 1)
         }
     }
 
@@ -17,7 +17,10 @@ function Counter() {
         setCounter(0)
     }
 
-    console.log(counter)
+    const myDemoFunc = () => <div>DEMO JSX</div>
+
+    const myDemoComponent = myDemoFunc()
+    
 
     return <div className='space-y-5 border-black border'>
         <h1 className='text-lg font-bold'>{counter}</h1>
@@ -26,6 +29,9 @@ function Counter() {
         <button className='border-black border' onClick={incrementBy15}>incrementBy15</button>
         <br />
         <button className='border-black border' onClick={reset}>Reset</button>
+
+        <br />
+        { myDemoComponent }
     </div>
 }
 

@@ -36,9 +36,9 @@ const Accordion = () => {
         setFaqs(faqs.map(faq => faq.id === id ? {...faq, isOpen: !faq.isOpen} : faq))
     }
 
-    // 1. onClick={referenceFunction}
-    // 2. onClick={referenceFunction()}
-    // 3. onClick={() => handlerFunction()}
+    // 1. onClick={referenceFunction}  => use this
+    // 2. onClick={referenceFunction()} => DO NOT USE AT ALL - causes function to be invoked right away
+    // 3. onClick={() => handlerFunction()} => or use this
 
     return (
     <div className="border border-red-500">
