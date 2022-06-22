@@ -1,10 +1,7 @@
-import {useState} from 'react'
-import logo from './logo.svg';
 import './App.css';
-import LinkContainer from './components/LinkContainer';
 import Accordion from "./components/pages/Accordion/index"
-import Counter from './components/Counter';
-
+import Counter from './components/counter/Counter';
+import User from './components/users/User'
 // const intialState = false
 
 function App() {
@@ -13,7 +10,7 @@ function App() {
     <div className="App">
       <Accordion />
       <Counter />
-
+      <User />
     </div>
   );
 }

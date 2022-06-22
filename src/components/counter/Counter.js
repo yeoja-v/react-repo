@@ -7,10 +7,16 @@ function Counter() {
         setCounter(counter + 1)
     }
 
-
 const incrementBy15 = () => {
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 15; i++) { 
+        // for loop will run 15x until function ends
+        // we want the most upto date value, instead of counter + 1..
+        // we must use callback function!
+        
         setCounter((prevCounter) => prevCounter + 1)
+        console.log("for loop is working, iteration:", i+1)
+
+        // setCounter(counter + 15)
     }
 }
 

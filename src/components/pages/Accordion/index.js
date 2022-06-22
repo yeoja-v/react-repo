@@ -32,7 +32,7 @@ const Accordion = () => {
     //     }) 
     // }
 
-    const toggler = (id) => {
+    const toggler = (id, event) => {
         setFaqs((prevState) => {
             return prevState.map(faq =>{
                 return faq.id === id ? {...faq, isOpen: !faq.isOpen} : faq
@@ -44,13 +44,18 @@ const Accordion = () => {
     }
 
 //tailwind CSS, a big style sheet that is composed for us and can be accessed by control + space
+// 1. onClick={referenceFunction} => use this
+// 2. onClick{referenceFunction()} => do not use at all, invokes function right away
+// 3. onClick={() => handlerFunction()} - anonymous function, receives event object
     return (
+    
         <div className="border border-red-500"><h1>Accordion Title</h1>
         <ul>
             {faqs.map(faq => {
                 return (
                     <li key={faq.id} className="border border-black">
-                        <div onClick={() => toggler(faq.id)}>{faq.question}</div>
+                        <div onClick={(event) => toggler(faq.id)}>{faq.question}</div>
+            {/* toggler will only run when it is invoked when it is clicked on */}
                         {faq.isOpen ? <div>{faq.answer}</div> : null}
                     </li>
                 )
