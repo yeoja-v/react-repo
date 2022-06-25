@@ -8,6 +8,17 @@ function User() {
     const [users, setUsers] = useState(null)
     const [loading, setLoading] = useState(true)
 
+    const getUsers = async () => {
+      try {
+        const result = await axios.get("https://jsonplaceholder.typicode.com/users")
+        setUsers(result.data)
+        setLoading(false)
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+      }
+    }
+
     async function getUser (userId) {
       try { 
         const result = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
