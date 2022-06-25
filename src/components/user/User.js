@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import UserCard from './UserCard'
+import SearchUser from './SearchUser'
 
 function User() {
     const [users, setUsers] = useState([])
@@ -41,18 +43,19 @@ function User() {
     }, [userId])
 
 
-    console.log("user id", userId)
-    console.log('user', user)
+    // console.log("user id", userId)
+    // console.log('user', user)
 
 
     if (loading) {
         return <div>LOADING...</div>
     }
 
-    return <div>
-        <input className='border border-black' type="text" value={userId} onChange={(event) => setUserId(event.target.value)} />
-
-        <h1>u</h1>
+    return <div className='space-y-10'>
+        <SearchUser userId={userId} setUserId={setUserId} />
+        {user && 
+            <UserCard user={user} />
+        }
     </div>
 }
 
