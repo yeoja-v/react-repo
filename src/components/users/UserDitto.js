@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect , useState } from 'react'
 import axios from 'axios'
+import UserCardDitto from './UserCardDitto'
 
 function UserDitto() {
     const [user, setUser] = useState([]) //contains all the data !
@@ -38,7 +39,11 @@ if (loading) {
         <h1>Search User</h1>
         <input type="text" value={userId} onChange={(event) => setUserId(event.target.value)} />
         {/* value={userId} sets to 0 / setUserId is the CHANGED event /  */}
-        <div>Name: {user.name}
+        <div>
+            <h1>Deconstruction</h1>
+            <UserCardDitto user={user}/>
+            <h2>Nondeconstruction</h2>
+        Name: {user.name}
         <br />
         Email: {user.email}</div>
         
