@@ -13,4 +13,4 @@ const SearchUser = ({userId, setUserId}) => {
     )
 }
 
-export default SearchUser
+export default SearchUser 

@@ -22,7 +22,7 @@ async function getUser (userId) {
         console.log(error)
         setLoading(false)
     }
-}
+} 
 
 useEffect(() => {
     getUser(userId)
