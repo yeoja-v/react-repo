@@ -1,4 +1,5 @@
 import './App.css';
+import CreateAccount from './components/auth/CreateAccount';
 import Counter from './components/counter/Counter';
 import Accordion from "./components/pages/Accordion/index"
 import User from './components/user/User';
@@ -11,6 +12,8 @@ function App() {
       <Counter />
       <br />
       <User />
+      <br />
+      <CreateAccount />
     </div>
   )
 }
