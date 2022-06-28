@@ -3,10 +3,9 @@ import React from 'react'
 // import UserClone from './components/users/UserClone';
 import Counter from './components/counter/Counter';
 import Accordion from './components/pages/Accordion';
-import UserRep from './components/users/UserRep';
-import UserDitto from './components/users/UserDitto';
 import UserClone from './components/users/UserClone';
 import CreateAccount from './components/auth/CreateAccount';
+import CreateProfile from './components/auth/CreateProfile';
 
 // const intialState = false
 
@@ -20,9 +19,8 @@ function App() {
       <br />
       <UserClone />
       <br />
-      <CreateAccount />
-      {/* <UserRep /> */}
-      {/* <UserDitto /> */}
+      <CreateProfile />
+      {/* <CreateAccount /> */}
           </div>
   );
 }
