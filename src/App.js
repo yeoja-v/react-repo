@@ -19,8 +19,8 @@ function App() {
       <br />
       <UserClone />
       <br />
-      <CreateProfile />
-      {/* <CreateAccount /> */}
+      {/* <CreateProfile /> */}
+      <CreateAccount />
           </div>
   );
 }
