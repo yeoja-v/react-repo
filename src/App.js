@@ -5,7 +5,7 @@ import Counter from './components/counter/Counter';
 import Accordion from './components/pages/Accordion';
 import UserClone from './components/users/UserClone';
 import CreateAccount from './components/auth/CreateAccount';
-import CreateProfile from './components/auth/CreateProfile';
+import Login from './components/auth/Login'
 
 // const intialState = false
 
@@ -19,7 +19,7 @@ function App() {
       <br />
       <UserClone />
       <br />
-      <CreateAccount />
+      <Login />
           </div>
   );
 }
