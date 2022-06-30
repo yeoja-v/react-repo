@@ -59,7 +59,7 @@ function CreateAccount() {
     console.log("errors", errors)
 
     return (
-        <form className="w-11/12 md:w-6/12 lg:w-5/12 mx-auto space-y-4 mt-12" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-11/12 md:w-6/12 lg:w-4/12 xl:w-3/12 mx-auto space-y-4 mt-12" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-2xl"><strong>Create An Account</strong></h1>
             <div className="space-y-2">
                 {inputFields.map(field => {
