@@ -61,9 +61,9 @@ function CreateAccount() {
   ]
 
 
-  // const handleInputChange = (event, input) => {
-  //     setInput({...input, [event.target.name]: event.target.value})
-  // }
+//   const handleInputChange = (event, input) => {
+//       setInput({...input, [event.target.name]: event.target.value})
+//   }
 
   // const submitHandler = (event) => {
   //   event.preventDefault()
@@ -87,8 +87,8 @@ function CreateAccount() {
                       <label htmlFor={field.name} className="mr-auto font-semibold">
                           {field.label}
                       </label>
-                      {/* <input id={field.name} type={field.inputType} className="border rounded-md p-2" placeholder={field.placeholder} {...register(field.name)} />
-                       {errors[field.name]?.message && <p className='text-red-500 text-start'>{errors[field.name].message}</p> } */}
+                      <input id={field.name} type={field.inputType} className="border rounded-md p-2" placeholder={field.placeholder} {...register(field.name)} />
+                        {/* {errors[field.name] && errors[field.name]?.message && <p className='text-red-500 text-start'>{errors[field.name].message}</p> } */}
                     
                   </div>
               )
