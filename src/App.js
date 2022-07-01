@@ -1,5 +1,6 @@
 import './App.css';
 import CreateAccount from './components/auth/CreateAccount';
+import LoginV from './components/auth/LoginV';
 // import Counter from './components/counter/Counter';
 // import Accordion from "./components/pages/Accordion/index"
 // import User from './components/user/User';
@@ -14,6 +15,7 @@ function App() {
       <User />
       <br /> */}
       <CreateAccount />
+      {/* <LoginV /> */}
     </div>
   )
 }
