@@ -1,6 +1,7 @@
 import './App.css';
 import CreateAccount from './components/auth/CreateAccount';
 import LoginV from './components/auth/LoginV';
+import PizzaContainer from './components/redux/pizza/PizzaContainer';
 // import Counter from './components/counter/Counter';
 // import Accordion from "./components/pages/Accordion/index"
 // import User from './components/user/User';
@@ -14,8 +15,9 @@ function App() {
       <br />
       <User />
       <br /> */}
-      <CreateAccount />
+      {/* <CreateAccount /> */}
       {/* <LoginV /> */}
+      <PizzaContainer />
     </div>
   )
 }

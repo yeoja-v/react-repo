@@ -1,7 +1,7 @@
 import { BUY_PIZZA, RETURN_PIZZA, RESET_PIZZA} from './pizzaTypes'
 
 const initialState = {
-    numOfPizza: 50,
+    numOfPizza: 100,
 }
 
 const pizzaReducer = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const pizzaReducer = (state = initialState, action) => {
             return { ...state, numOfPizza: state.numOfPizza + 1 }
 
         case RESET_PIZZA:
-            return { numOfPizza: 50 }  
+            return { numOfPizza: 100 }  
             
         default:
             return state    

@@ -11,7 +11,6 @@ const schema = yup.object().shape({
 
 function CreateAccount() {
    
-
     const {
         register,
         handleSubmit,
