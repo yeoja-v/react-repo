@@ -25,7 +25,7 @@ const inputFields = [
     },
 ]
 
-function LoginV() {
+function Login() {
 
     function loginHandler(data) {
         console.log("data", data)
@@ -56,4 +56,4 @@ function LoginV() {
   )
 }
 
-export default LoginV
+export default Login
