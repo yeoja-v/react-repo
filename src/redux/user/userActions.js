@@ -16,7 +16,7 @@ export const removeUser = (name) => {
 
 export const resetUser = (name) => {
     return {
-        type: RESET_USER
+        type: RESET_USER,
         payload: name
     }
 }
