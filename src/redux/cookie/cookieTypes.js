@@ -1,0 +1,3 @@
+export const BUY_COOKIE = "BUY_COOKIE"
+export const RETURN_COOKIE = "RETURN_COOKIE"
+export const RESET_COOKIE = "RESET_COOKIE"
