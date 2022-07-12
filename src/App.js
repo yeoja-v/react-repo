@@ -1,28 +1,20 @@
 import './App.css';
-import CreateAccount from './components/auth/CreateAccount';
-import LoginV from './components/auth/LoginV';
-import CookieContainer from './components/redux/cookie/CookieContainer';
-import PizzaContainer from './components/redux/pizza/PizzaContainer';
-import UserContainer from './components/redux/user/UserContainer';
-// import Counter from './components/counter/Counter';
-// import Accordion from "./components/pages/Accordion/index"
-// import User from './components/user/User';
+import { Routes,Route } from 'react-router-dom'
+import { Home } from './pages/Home';
+import { PizzaPage } from './pages/PizzaPage';
+import { UserPage } from './pages/UserPage';
+import Navbar from './components/navigation/Navbar';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Accordion />
-      <br />
-      <Counter />
-      <br />
-      <User />
-      <br /> */}
-      {/* <CreateAccount /> */}
-      {/* <LoginV /> */}
-      <PizzaContainer />
-      {/* <CookieContainer /> */}
-      <br />
-      <UserContainer />
+      <Navbar />
+     <Routes>
+      <Route path='/' element={<Home />} /> 
+      <Route path='/pizza' element={<PizzaPage />} />
+      <Route path='/user' element={<UserPage />} />
+     </Routes>
     </div>
   )
 }
