@@ -3,7 +3,7 @@ import { buyPizza, returnPizza, resetPizza } from "../../../redux/pizza/pizzaAct
 import { useState } from "react"
 
 const PizzaContainer = () => {
-    const numOfPizza = useSelector((state) => state.numOfPizza)
+    const numOfPizza = useSelector((state) => state.pizza.numOfPizza)
     const dispatch = useDispatch()
     const [quantity, setQuantity] = useState(0)
 

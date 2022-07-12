@@ -1,6 +1,12 @@
-import {createStore } from 'redux'
+import {createStore, combineReducers } from 'redux'
 import cookieReducer from './cookie/cookieReducer'
 import pizzaReducer from './pizza/pizzaReducer'
 import userReducer from './user/userReducer'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-export const store = createStore(userReducer)
+const rootReducer = combineReducers({
+    pizza: pizzaReducer,
+    user: userReducer
+})
+
+export const store = createStore(rootReducer, composeWithDevTools())
