@@ -1,6 +1,7 @@
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { Link } from 'react-router-dom'
 
 const schema = yup.object().shape({
     firstName: yup.string().min(3, "First name must be 3+ characters").required("First name is required."),
@@ -73,17 +74,17 @@ function CreateAccount() {
                     )
                 })}
             </div>
-            <div className="flex flex-row justify-between px-4">
-                <div className="font-semibold">Remember Me</div>
-                <a href="#" className="text-indigo-500 font-semibold">Forgot Password</a>
-            </div>
+            
             <div>
                 <button className="bg-indigo-500 text-white w-full py-3 rounded-md" type="submit">
                     Create An Account
                 </button>
             </div>
-            <div>Have an account? <a href="#" className="text-indigo-500"><strong>Log in</strong></a></div>
-        </form>)
+            <div>
+                Have an account? <Link to ="/auth/login" className="text-indigo-500">
+                <strong>Log in</strong> </Link></div>
+        </form>
+        )
 }
 
 export default CreateAccount
