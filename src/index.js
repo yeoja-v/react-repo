@@ -5,14 +5,45 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import ProfilePage from './pages/ProfilePage';
+import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
+import PizzaPage from './pages/PizzaPage';
+import UserPage from './pages/UserPage';
+import Home from './pages/Home';
+import UserRoute from './routes/user';
+import AuthRoute from './routes/AuthRoute';
+import NotFound from './pages/404/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Provider store={store}>
-      <App />
+    <Routes>
+    
+      <Route path='/' element={<App />}> 
+      <Route index element={<Home />} /> 
+      <Route path='/pizza' element={<PizzaPage />} />
+
+      <Route path='/user' element={<UserRoute />}>
+        <Route index element={<UserPage />} />
+        <Route path=":username" element={<ProfilePage /> } />
+      </Route>
+      
+      <Route path='auth' element={<AuthRoute />}>
+      <Route path='login' element={<LoginPage />} />
+      <Route path='register' element={<RegisterPage />} />
+      <Route path='*' element={<NotFound />} />
+    </Route>
+
+    <Route path='*' element={<NotFound />} />
+    </Route>
+      
+
+     </Routes>
     </Provider>
     </BrowserRouter>
   </React.StrictMode>
