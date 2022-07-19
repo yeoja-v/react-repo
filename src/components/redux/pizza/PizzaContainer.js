@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux/es/exports"
 import { buyPizza, returnPizza, resetPizza } from "../../../redux/pizza/pizzaActions"
 import { useState } from "react"
+import useProfileUser from "../../hooks/useProfileUser"
 
 const PizzaContainer = () => {
     const numOfPizza = useSelector((state) => state.pizza.numOfPizza)

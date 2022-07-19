@@ -1,4 +1,4 @@
-
+import {REMOVE_USER, SET_USER} from "./profileUserTypes"
 
 export function setUser(user) {
 return {
