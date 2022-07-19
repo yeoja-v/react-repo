@@ -1,7 +1,11 @@
 import { useState,useEffect } from "react";
+import { useDispatch } from "react-redux/es/exports";
+
 
 const useGetComment = () => {
     const [comment, setComment] = useState([]);
+    // const dispatch = useDispatch()
+
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
@@ -11,11 +15,7 @@ const useGetComment = () => {
 
     ['comment',comment])
 
-    return (
-        <div>
-            
-        </div>
-    )
+    return 
 }
 
 export default useGetComment
