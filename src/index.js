@@ -28,14 +28,15 @@ root.render(
       <Route index element={<Home />} /> 
       <Route path='/pizza' element={<PizzaPage />} />
 
-      <Route path='/user' element={<UserRoute />}>
+      <Route path='user' element={<UserRoute />}>
         <Route index element={<UserPage />} />
-        <Route path=":username" element={<ProfilePage /> } />
+        <Route path=":userId" element={<ProfilePage /> } />
       </Route>
       
       <Route path='auth' element={<AuthRoute />}>
       <Route path='login' element={<LoginPage />} />
       <Route path='register' element={<RegisterPage />} />
+      <Route index element={<NotFound />} />
       <Route path='*' element={<NotFound />} />
     </Route>
 
