@@ -9,13 +9,13 @@ const useGetComment = () => {
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
-        .then((result) => setComment(result))
+        .then((result) => {
+            setComment(result)
+        })
         .catch((err) => console.log(err)) ;
-    },
+    }, [comment])
 
-    ['comment',comment])
-
-    return 
+    return comment
 }
 
 export default useGetComment
