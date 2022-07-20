@@ -12,11 +12,16 @@ const useProfileUser = (userId) => {
 
 
     useEffect(() => {
+      // check if user profile is in redux
+      //if user profile exists then return user profile to be used inside component
+      //otherwise, make api call to get user info then set user info in redux
+
         axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
         .then(({ data }) => dispatch(setUser(data)))
         .catch(err => console.log(err))
       }, [userId, dispatch, setUser])
 
+       //then return that user profile
       return profileUser
 }
 
