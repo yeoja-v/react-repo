@@ -6,14 +6,16 @@ const useGetComment = () => {
     const [comment, setComment] = useState([]);
     // const dispatch = useDispatch()
 
+//if our block of code does not depend on any variable, no dependencies or else our useEffect will keep re-rendering.
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
         .then((result) => {
-            setComment(result)
+            console.log('result', result)
+            // setComment(result)
         })
         .catch((err) => console.log(err)) ;
-    }, [comment])
+    }, [])
 
     return comment
 }
