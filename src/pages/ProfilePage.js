@@ -13,7 +13,7 @@ const ProfilePage = () => {
   useEffect(() => {
     console.log('useEffect is running')
 
-    setTimeout(() => {
+    const timeId = setTimeout(() => {
       console.log('a message from the past - 5 seconds ago')
     }, 5000)
 
